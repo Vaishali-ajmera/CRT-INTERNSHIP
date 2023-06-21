@@ -1,0 +1,500 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+.max-width{
+    max-width: 1300px;
+    padding: 0 80px;
+    margin: auto;
+    
+}
+/* navbar styling */
+.navbar{
+    background-color: transparent;
+    position: absolute;
+    width: 100%;
+    z-index: 999;
+    padding: 20px 0;
+
+}
+.navbar .max-width{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .logo{
+    width: 30%;
+    background-image: linear-gradient(to bottom, crimson, rgb(141, 66, 82));
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    padding: 2px 0px;
+    padding-left: 100px;
+    box-sizing: border-box;
+    margin-top: 10px;
+    animation: aagepeeche 2s linear infinite;
+    animation-direction: alternate;
+}
+
+.navbar .logo span{
+    color: crimson
+}
+
+@keyframes aagepeeche {
+    from{padding-left: 40px;}
+    to{padding-right: 40px;}
+    
+}
+.navbar .menu{
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    font-size: 1.2rem;
+}
+.navbar .menu li {
+    display: inline-block;
+}
+.navbar .menu li a{
+    position: relative;
+    color: white;
+    font-weight: 600;
+    font-size: 1.1rem;
+    text-transform: capitalize;
+    padding: 8px 25px;
+    
+}
+
+.navbar .menu li a::after{
+    content:"";
+    position: absolute;
+    top: 105%;
+    left: 20%;
+    width: 0%;
+    height:2px;
+    border-bottom: 3px solid crimson;
+    transition: all 0.4s ease;
+}
+.navbar .menu li a:hover:after{
+    width: 60%;
+}
+/* home section */
+#home{
+    height: 100vh;
+    background: url('/images/banner.jpg');
+    background-attachment: fixed;
+}
+#home .max-width{
+    display: flex;
+}
+#home .max-width .home-content{
+    margin-top: 200px;
+    color: white;
+}
+#home .max-width .home-content .text-1{
+    font-size: 2rem;
+    margin: 2px 0px;
+}
+#home .max-width .home-content .text-2{
+    font-size: 3.5rem;
+    font-weight: bold;
+    color: #fff;
+    margin: 2px 0px;
+}
+#home .max-width .home-content .text-3{
+    font-size: 2.1rem;
+    margin: 1px 0px;
+}
+#home .home-content button{
+    background-color: crimson;
+    color: white;
+    margin-top: 20px;
+    padding: 12px 36px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    border: 2px solid crimson;
+    border-radius: 6px ;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+#home .home-content button:hover{
+    color: crimson;
+    background: none;
+   
+}
+/* all{ common styling */
+section{
+    padding: 80px 0;
+}
+
+section .title{
+    position: relative;
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+section .title::before{
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0px;
+    height: 3px;
+    width: 180px;
+    background: #111;
+    transform: translateX(-50%);
+}
+
+section .title::after{
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -12px;
+    font-size: 20px;
+    color:crimson;
+    padding: 5px;
+    background: #fff;
+    transform: translateX(-50%);
+}
+
+.about .about-content, 
+.services .serv-content, 
+.skills .skills-content,
+.contact .contact-content, footer{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* about section */
+
+
+.about .title::after{
+    content:"who i am";
+}
+
+.about .about-content .left{
+    width: 45%;
+
+}
+
+.about .about-content .left img{
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 6px;
+
+}
+
+.about .about-content .right{
+    width: 55%;
+}
+
+.about .about-content .right .text{
+    font-size: 25px;
+    font-weight: 600;    
+    margin-bottom: 10px;
+}
+
+.about .about-content .right .text span{
+    color: crimson;
+}
+
+.about .about-content .right p{
+    text-align: justify;
+} 
+
+.about .about-content .right button{
+    cursor: pointer;
+    background-color: crimson;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 1px 30px;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: 2px solid crimson;
+    transition: all 0.3s ease;
+
+}
+
+.about .about-content .right button:hover{
+    color: crimson;
+    background: none;
+}
+
+
+/* services section start */
+.services,.contact {
+    color: #fff;
+    background-color: #111;
+
+}
+.services .title::before, .contact .title::before{
+    background-color: #fff;
+}
+
+.services .title::after{
+    content:"what i provide";
+    background-color: #111;
+}
+
+
+.services .serv-content .card{
+    width: calc(33% - 20px);
+    background-color: #222;
+    text-align: center;
+    padding: 80px 25px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.services .serv-content .card:hover{
+    background-color: crimson;
+}
+.services .serv-content .card .box{
+    transition: all 0.3s ease;
+    
+}
+.services .serv-content .card:hover .box{
+    transform:scale(1.05);
+    
+}
+.services .serv-content .card i{
+    font-size: 50px;
+    color: crimson;
+    transition: color 0.3s ease;
+    
+}
+.services .serv-content .card:hover i{
+    color:#fff;
+}
+
+.services .serv-content .card .text{
+    font-size: 25px;
+    font-weight: 500;
+    margin: 10px 0 7px 0;
+}
+
+
+
+/* skills section styling */
+.skills .title::after{
+    content: "what i know";
+}
+
+.skills .skills-content .column{
+    width: calc(50% - 30px);
+    height: 50vh;
+}
+
+.skills .skills-content .left .text{
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.skills .skills-content .left p{
+    text-align: justify;
+}
+.skills .skills-content .left a{
+    display: inline-block;
+    background-color: crimson;
+    color: #fff;
+    font-size: 18px;
+    padding: 8px 16px;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: 2px solid crimson;
+    transition: all 0.3s ease;
+   
+}
+.skills .skills-content .left a:hover{
+    color:crimson;
+    background: none;
+}
+
+.skills .skills-content .right .bars{
+    margin-bottom: 15px;
+}
+.skills .skills-content .right .info{
+    display:flex;
+    margin-bottom: 5px;
+    align-items: center;
+    justify-content: space-between;
+}
+.skills .skills-content .right span{
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.skills .skills-content .right .line{
+    width: 100%;
+    height: 5px;
+    background-color: lightgray;
+    position: relative;
+}
+
+.skills .skills-content .right .line::before{
+    content:"";
+    position: absolute;
+    height: 100%;
+    left:0;
+    top:0;
+    background: crimson;
+
+}
+.skills .skills-content .right .html::before
+{
+    width: 90%;
+}
+.skills .skills-content .right .css::before
+{
+    width: 50%;
+}
+.skills .skills-content .right .js::before
+{
+    width: 60%;
+}
+.skills .skills-content .right .mysql::before
+{
+    width: 80%;
+}
+.skills .skills-content .right .php::before
+{
+    width: 70%;
+}
+
+
+
+/* contact section styling */
+.contact .title::after{
+    
+    background-color: #111;
+    content:"get in touch";
+}
+.contact .contact-content .column{
+    width: calc(50% - 30px);
+}
+
+.contact .contact-content .text{
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.contact .contact-content .left p{
+    text-align: justify;
+}
+.contact .contact-content .left .icons{
+    margin: 10px 0;
+    
+}
+.contact .contact-content .row{
+    align-items: center;
+}
+
+.contact .contact-content .row .info{
+    margin-left: 50px;
+}
+.contact .contact-content .row i{
+    font-size: 25px;
+    color:crimson;
+    position: relative;
+    top: 40px;
+}
+.contact .contact-content .info .head{
+    font-weight: 500;
+}
+.contact .contact-content .info .sub-title{
+    color:rgba(255, 255, 255, 0.729);
+}
+
+.contact .right form .fields{
+    display:flex;
+   
+}
+.contact .right form .field, 
+.contact .right form .fields .field{
+    height: 45px;
+    width: 100%;
+    margin-bottom: 15px;
+}
+.contact .right form  .name{
+    margin-right: 10px;
+}
+.contact .right form .email{
+    margin-left: 10px;
+}
+.contact .right form .textarea{
+   height: 80px;
+}
+.contact .right form .field input
+,.contact .right form .textarea textarea{
+    height: 100%;
+    width: 100%;
+    border: 1px solid lightgrey;
+    border-radius: 6px;
+    outline: none;
+    padding: 0 15px;
+    font-size: 17px;
+}
+
+.contact .right form .textarea textarea{
+    resize: none;
+    padding-top: 10px;
+}
+.contact .right form .button{
+    height: 47px;
+    width: 170px;
+
+}
+.contact .right form .button button{
+    height:100%;
+    width: 100%;
+    border: 2px solid crimson;
+    background-color: crimson;
+    border-radius: 6px;
+    font-size: 20px;
+    color:#fff;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+}
+.contact .right form .button button:hover{
+    color: crimson;
+    background: none;
+}
+
+/* footer section styling */
+footer{
+    background: crimson;
+    padding:20px 28px;
+    color:rgba(255, 255, 255, 0.929);
+    
+}
+
+footer span a{
+    color:rgba(255, 255, 255, 0.729);
+    text-decoration: none;
+}
+
+footer span a:hover{
+    text-decoration: underline;
+
+}
+.social-media-icons{
+    margin: 0px 3px;
+    font-size: 20px;
+    cursor: pointer;
+
+}
+

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" integrity="sha512-10/jx2EXwxxWqCLX/hHth/vu2KY3jCF70dCQB8TSgNjbCVAC/8vai53GfMDrO2Emgwccf2pJqxct9ehpzG+MTw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="Stylesheet" href="style.css">
+    <title>Random Quote Generator</title>
+    <link rel="icon" type="image/x-icon" href="./images/twitter-logo.png">
+</head> 
+<body>
+    <div class="container">
+        <h1>Random Quote Generator</h1>
+        <div class="inner">
+            <div class="box">
+                <p class="number">
+                    <img src="images/twitter-logo.png" 
+                    alt="tweetme" 
+                    title="TweetMe" 
+                    id="tweetme" 
+                    />
+                </p>
+                <div class="text">
+                    <i class="start-quote fas fa-quote-left"></i>
+                    <p id="quotes" class="quotes"></p>
+                    <p id="author" class="author"></p>
+                </div>
+                <label class="button">
+                    <button id="newQuotes">New Quotes</button>
+                </label>
+            </div>
+        </div>
+    </div>
+     
+    <script src="app.js"></script>
+</body>
+</html>
